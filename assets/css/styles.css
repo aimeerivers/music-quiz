@@ -1,0 +1,69 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+main {
+  padding: 2rem;
+}
+
+footer {
+  margin-top: 2rem;
+}
+
+a {
+  display: inline-block;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: #0056b3;
+}
+
+/* Audio button styles */
+.audio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.audio-control {
+  display: inline-block;
+}
+
+.play-pause {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.play-pause:hover {
+  background-color: #0056b3;
+}
+
+.icon {
+  pointer-events: none;
+}
