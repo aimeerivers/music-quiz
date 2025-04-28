@@ -34,16 +34,22 @@ a:hover {
   background-color: #0056b3;
 }
 
-/* Audio button styles */
+/* Ensure .audio-control divs stack vertically and are centered */
 .audio-buttons {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
+  flex-direction: column; /* Stack children vertically */
+  gap: 1rem; /* Add spacing between rows */
+  align-items: center; /* Center children horizontally */
 }
 
 .audio-control {
-  display: inline-block;
+  display: flex;
+  align-items: center; /* Align label and button vertically */
+}
+
+.clip-label {
+  margin-right: 1rem;
+  font-weight: bold;
 }
 
 .play-pause {
