@@ -1,7 +1,7 @@
 // Function to toggle play/stop for a specific audio clip
 function togglePlayPause(clipId) {
-  const audio = document.querySelector(`#${clipId} audio`);
-  const button = document.querySelector(`#${clipId} .play-pause`);
+  const audio = document.getElementById(clipId);
+  const button = document.querySelector(`[onclick="togglePlayPause('${clipId}')"]`);
   const icon = button.querySelector('.icon');
 
   // Stop all other audio clips
@@ -9,8 +9,11 @@ function togglePlayPause(clipId) {
     if (otherAudio !== audio) {
       otherAudio.pause();
       otherAudio.currentTime = 0; // Reset to the beginning
-      const otherButton = otherAudio.closest('.audio-control').querySelector('.play-pause .icon');
-      if (otherButton) otherButton.textContent = '▶'; // Reset icon to play
+      const otherButton = document.querySelector(`[onclick="togglePlayPause('${otherAudio.id}')"]`);
+      if (otherButton) {
+        const otherIcon = otherButton.querySelector('.icon');
+        if (otherIcon) otherIcon.textContent = '▶'; // Reset icon to play
+      }
     }
   });
 

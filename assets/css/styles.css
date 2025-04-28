@@ -47,8 +47,10 @@ a:hover {
   align-items: center; /* Align label and button vertically */
 }
 
+/* Add padding to the left of the "Reveal" label */
 .clip-label {
   margin-right: 1rem;
+  padding-left: 0.5rem; /* Add space to the left of the label */
   font-weight: bold;
 }
 
